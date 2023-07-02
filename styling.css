@@ -1,0 +1,36 @@
+html {
+    color: azure;
+}
+
+input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+}
+
+/*Enough preliminaries*/
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 12fr;
+}
+
+header {
+    background-color: #1f2937;
+}
+
+
+
+
+nav {
+    background-color: #1f2937;
+    grid-row: 1 / -1; 
+}
+main {
+    background-color: #111827;
+}

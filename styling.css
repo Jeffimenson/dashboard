@@ -1,5 +1,6 @@
 html {
     color: azure;
+    font-family: Helvetica, sans-serif;
 }
 
 input, button {
@@ -8,6 +9,12 @@ input, button {
     box-sizing: border-box;
     border: none;
     border-radius: 0;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*Enough preliminaries*/
@@ -22,15 +29,124 @@ body {
 
 header {
     background-color: #1f2937;
+    border-bottom: 2px solid #2b384b;
+    display: grid;
+    grid-template-columns: 20fr 1fr 1fr;
+    align-items: center;
+    padding: 0 1em;
+}
+
+header input[type='search'] {
+    appearance: none;
+    border-radius: 10px;
+    height: 50%;
+    background-color: #2b384b;
+    padding: 0 1em;
+    margin-right: 60%;
 }
 
 
 
+header input[type='search']::placeholder {
+    color: #6b7d99;
+}
+
+header button {
+    background-color: transparent;
+}
+
+header button svg {
+    width: 2em;
+    fill: azure;
+}
+
+header button img {
+    border-radius: 50%;
+}
 
 nav {
     background-color: #1f2937;
     grid-row: 1 / -1; 
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 5fr;
+    gap: 10px;
+    border-right: solid 2px #2b384b;
 }
+
+nav .logo {
+    width: 200px;
+    margin: 0 1em;
+    align-self: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+nav ul:nth-child(2) li:first-child {
+    border-right: #7892b9 5px solid;
+}
+
+nav ul:nth-child(3){
+    border-top: 2px solid #2b384b;
+    grid-template-rows: 3fr 2fr 2fr;
+}
+
+nav ul li a {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 6fr;
+    font-size: 16px;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+   background-color: #2b384b; 
+}
+
+nav ul li p {
+    color: rgb(187, 197, 197);
+    margin: 0;
+    padding: 1em;
+    margin-top: 30px;
+}
+
+nav .switch-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: block;
+}
+nav .switch-user p {
+    margin: 0;
+    font-size: 1.4em;
+}
+.switch-user {
+    display: flex;
+    width: 85%;
+    height: 60px;
+    align-items: center;
+    background-color:rgb(105, 174, 184);
+    border-radius: 10px;
+    align-self:self-end;
+    justify-self: center;
+    margin-bottom: 15%;
+    box-sizing: border-box;
+    padding: 1em;
+    gap: 20px;
+}
+
+nav svg{
+    fill: azure;
+    width: 1.4em;
+}
+
 main {
     background-color: #111827;
 }

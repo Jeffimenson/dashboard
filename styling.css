@@ -1,3 +1,6 @@
+:root {
+    --cool-blue: rgb(89, 154, 252);
+}
 html {
     color: azure;
     font-family: Helvetica, sans-serif;
@@ -94,6 +97,7 @@ nav {
     gap: 10px;
     border-right: solid 2px #2b384b;
 
+    padding: 15px 0 15%;
 }
 
 nav .logo {
@@ -133,7 +137,6 @@ nav ul li a:hover {
 }
 
 nav ul li p {
-    color: rgb(187, 197, 197);
     margin: 0;
     padding: 1em;
     margin-top: 30px;
@@ -154,11 +157,10 @@ nav .switch-user p {
     width: 85%;
     height: 60px;
     align-items: center;
-    background-color:rgb(105, 174, 184);
+    background-color:rgb(78, 128, 204);
     border-radius: 10px;
     align-self:self-end;
     justify-self: center;
-    margin-bottom: 15%;
     box-sizing: border-box;
     padding: 1em;
     gap: 20px;
@@ -171,4 +173,54 @@ nav svg{
 
 main {
     background-color: #111827;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.subheader {
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.subheader button {
+    height: 40px;
+    margin: 8px;
+    background-color: transparent;
+    border: var(--cool-blue) 2px solid;
+    border-radius: 10px;
+    color: var(--cool-blue);
+    transition: color 0.5s, background-color 0.5s;
+}
+.subheader button:hover {
+    color: azure;
+    background-color: var(--cool-blue);
+    cursor: pointer;
+}
+.subheader ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    border-bottom: #2b384b 2px solid;
+    padding-bottom: 20px;
+    grid-column: 1 / -1;
+
+    position: relative;
+}
+.subheader ul li {
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: -22px;
+    transition: color 0.2s;
+}
+
+.subheader ul li:first-child {
+    border-bottom: var(--cool-blue) 2px solid;
+}
+.subheader ul li:hover {
+    color: var(--cool-blue);
+    
 }

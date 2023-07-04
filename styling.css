@@ -247,6 +247,12 @@ main {
     padding: 20px;
 }
 
+.card {
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr 1fr;
+}
+
 .card h3 {
     margin: 0;
     font-weight: 500;
@@ -260,8 +266,41 @@ main {
 .card .metric {
     padding: 0;
     margin: 0;
-    font-size: 5em;
+    font-size: 4em;
     font-family: monospace;
+    align-self: self-end;
+}
+
+.card .status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+
+.card svg {
+    width: 2.4em;
+    fill: rgb(96, 214, 96);
+}
+.card .icon {
+    position: absolute;
+    width: 3em;
+    top: 1em;
+    right: 1em;
+    fill: #c8d7ee;
+    background-color: #4c91f8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1em #1f2937;
+    box-sizing: border-box;
+    padding: 7px;
+}
+.card .status-num {
+    color: rgb(96, 214, 96);
+    font-size: 1.2em;
+}
+.card .status-tempest {
+    font-size: 1em;
+    color: azure;
 }
 .big-card {
     grid-row: 1 / 3;

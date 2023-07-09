@@ -403,7 +403,8 @@ main {
 
 .announcements li {
     display: grid;
-    grid-template-rows: auto 40px;
+    grid-template-rows: auto 1fr;
+    padding: 10px;
 }
 
 .announcements h4 {

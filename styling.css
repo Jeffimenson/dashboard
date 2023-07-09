@@ -403,7 +403,7 @@ main {
 
 .announcements li {
     display: grid;
-    grid-template-rows: auto min(40px, 1fr);
+    grid-template-rows: auto 40px;
 }
 
 .announcements h4 {
@@ -414,7 +414,9 @@ main {
 .announcements p {
     margin: 0;
     padding: 0;
+    text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 
